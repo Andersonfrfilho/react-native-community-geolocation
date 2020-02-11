@@ -1,0 +1,37 @@
+1º-create a module
+create-react-native-module --module-prefix react-native-community --package-identifier com.reactnativecommunity.andersonfrfilho.position --github-account andersonfrfilho --author-name Anderson --author-email andersonfrfilho@gmail.com --generate-example --example-name positionExample --example-react-native-version 0.61.5 position
+
+#################################################################################
+configuração de commit padrao
+1º - git init
+2º - yarn add @commitlint/config-conventional @commitlint/cli -D
+3º - crie um arquivo de raiz/commitlint.config.js
+ 3.1º - Coloque dentro do arquivo
+  module.exports = {extends: ['@commitlint/config-conventional']}
+ 3.2º - ou rode o comando 
+  echo module.exports = {extends: ['@commitlint/config-conventional']} > commitlint.config.js
+4º - Instalar o Husky
+  yarn add husky -D
+5º - copie o Husky no package.json 
+  cole emcima das dependencias de desenvolvimento
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
+    }  
+  }
+6º - instalar o commitizen
+  yarn add commitizen -D
+7º - executar o comando para yarn
+  yarn commitizen init cz-conventional-changelog --yarn --dev --exact
+7.1º - caso npm 
+  npm commitizen init cz-conventional-changelog --save-dev --save-exact
+9º - rode o comando git commit
+  1-tipo commit
+  2-scopo
+  3-escreve pequena descrição
+  4-descrição completa
+  5-existe uma eliminação de components
+  6-afeta alguma issues
+
+===================================
