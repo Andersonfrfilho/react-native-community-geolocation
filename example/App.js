@@ -8,33 +8,27 @@
  * https://github.com/facebook/react-native
  */
 
-import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View } from 'react-native';
+import React, {useState, useEffect} from 'react';
+import {StyleSheet, Text, View, Button} from 'react-native';
 import Geolocation from 'react-native-community-geolocation';
 
-export default class App extends Component<{}> {
-  state = {
-    status: 'starting',
-    message: '--'
-  };
-  componentDidMount() {
-    Geolocation.sampleMethod('Testing', 123, (message) => {
-      this.setState({
-        status: 'native callback received',
-        message
-      });
-    });
+export default function App() {
+  const [status, setStatus] = useState('starting');
+  const [message, setMessage] = useState('message');
+
+  async function getGeolocation() {
+    const data = await Geolocation.getCurrentPosition({provider: 'gps'});
+    setMessage(data);
   }
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>☆Geolocation example☆</Text>
-        <Text style={styles.instructions}>STATUS: {this.state.status}</Text>
-        <Text style={styles.welcome}>☆NATIVE CALLBACK MESSAGE☆</Text>
-        <Text style={styles.instructions}>{this.state.message}</Text>
-      </View>
-    );
-  }
+  return (
+    <View style={styles.container}>
+      <Text style={styles.welcome}>☆Geolocation example☆</Text>
+      <Text style={styles.instructions}>STATUS: {status}</Text>
+      <Text style={styles.welcome}>☆NATIVE CALLBACK MESSAGE☆</Text>
+      <Text style={styles.instructions}>{message}</Text>
+      <Button title="Press" onPress={() => getGeolocation()} />
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
