@@ -12,10 +12,10 @@ import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.uimanager.ViewManager;
 import com.facebook.react.bridge.JavaScriptModule;
 
-public class GeolocationPackage implements ReactPackage {
+public class RNCGeolocationPackage implements ReactPackage {
     @Override
     public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
-        return Arrays.<NativeModule>asList(new GeolocationModule(reactContext));
+        return Arrays.<NativeModule>asList(new RNCGeolocationModule(reactContext));
     }
 
     @Nullable

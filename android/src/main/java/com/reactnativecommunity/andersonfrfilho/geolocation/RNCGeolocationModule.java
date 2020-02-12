@@ -21,7 +21,7 @@ import com.facebook.react.bridge.ReadableMap;
 
 import org.json.JSONObject;
 
-public class GeolocationModule extends ReactContextBaseJavaModule implements LocationListener {
+public class RNCGeolocationModule extends ReactContextBaseJavaModule implements LocationListener {
     private static final String[] LOCATION_PERMS = {
             Manifest.permission.ACCESS_FINE_LOCATION
     };
@@ -50,7 +50,7 @@ public class GeolocationModule extends ReactContextBaseJavaModule implements Loc
     // Declaring a Location Manager
     protected LocationManager locationManager;
 
-    public GeolocationModule(ReactApplicationContext reactContext) {
+    public RNCGeolocationModule(ReactApplicationContext reactContext) {
         super(reactContext);
         this.reactContext = reactContext;
     }
