@@ -4,9 +4,9 @@
 ![Supports Android](https://img.shields.io/badge/platforms-android-lightgrey.svg)
 ![MIT License](https://img.shields.io/npm/l/@react-native-community/geolocation.svg)
 
-<!--[![npm total downloads](https://img.shields.io/npm/dt/react-native-community-geolocation.svg)](https://img.shields.io/npm/dt/react-native-community-geolocation.svg)
+[![npm total downloads](https://img.shields.io/npm/dt/react-native-community-geolocation.svg)](https://img.shields.io/npm/dt/react-native-community-geolocation.svg)
 [![npm monthly downloads](https://img.shields.io/npm/dm/react-native-community-geolocation.svg)](https://img.shields.io/npm/dm/react-native-community-geolocation.svg)
-[![npm weekly downloads](https://img.shields.io/npm/dw/react-native-community-geolocation.svg)](https://img.shields.io/npm/dw/react-native-community-geolocation.svg)<br>-->
+[![npm weekly downloads](https://img.shields.io/npm/dw/react-native-community-geolocation.svg)](https://img.shields.io/npm/dw/react-native-community-geolocation.svg)<br>
 
 Device Information for [React Native](https://github.com/facebook/react-native).<br>
 Here's an image the example:<br>

@@ -1,7 +1,7 @@
 {
   "name": "react-native-community-geolocation",
   "title": "React Native Community Geolocation",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Module Gelocation for react-native",
   "main": "index.js",
   "scripts": {
