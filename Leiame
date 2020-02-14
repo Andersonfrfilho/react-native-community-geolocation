@@ -1,5 +1,5 @@
 1º-create a module
-create-react-native-module --module-prefix react-native-community --package-identifier com.reactnativecommunity.andersonfrfilho.position --github-account andersonfrfilho --author-name Anderson --author-email andersonfrfilho@gmail.com --generate-example --example-name positionExample --example-react-native-version 0.61.5 position
+create-react-native-module --module-prefix react-native-community --package-identifier com.reactnativecommunity.andersonfrfilho.geolocation --platforms android --github-account andersonfrfilho --author-name Anderson --author-email andersonfrfilho@gmail.com --generate-example --example-name example --example-react-native-version 0.61.5 geolocation
 
 #################################################################################
 configuração de commit padrao
