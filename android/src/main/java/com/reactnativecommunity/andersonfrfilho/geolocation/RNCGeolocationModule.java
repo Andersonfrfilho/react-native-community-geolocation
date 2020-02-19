@@ -116,6 +116,16 @@ public class RNCGeolocationModule extends ReactContextBaseJavaModule implements 
                     // to handle the case where the user grants the permission. See the documentation
                     // for ActivityCompat#requestPermissions for more details.
                     this.requestPermissions(121);
+                    JSONObject geolocation = new JSONObject();
+                    geolocation.put("time", null);
+                    geolocation.put("speed",null);
+                    geolocation.put("provider",null);
+                    geolocation.put("longitude",null);
+                    geolocation.put("latitude",null);
+                    geolocation.put("bearing",null);
+                    geolocation.put("altitude",null);
+                    geolocation.put("accuracy",null);
+                    promise.resolve(geolocation.toString());
                     return;
                 }
                 this.canGetLocation = true;
